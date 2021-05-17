@@ -9,3 +9,18 @@ php bin/magento config:set customer/captcha/enable 0
 php bin/magento config:set admin/captcha/enable 0
 ```
 
+### change user passwd in phpmyadmin
+`UPDATE admin_user SET password = SHA2('[passwd]', 256) WHERE username='[username]';`
+
+### unlock admin user
+`php bin/magento admin:user:unlock [username]`
+
+### reindex
+`php bin/magento indexer:reindex`
+
+### clean cache
+`php bin/magento c:c`
+
+### make new admin user on cli
+`php bin/magento admin:user:create --admin-user="[username]" --admin-password="[pass]" --admin-email="[email]" --admin-firstname="[firstname]" --admin-lastname="[lastname]`
+
