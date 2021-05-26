@@ -24,3 +24,10 @@ php bin/magento config:set admin/captcha/enable 0
 ### make new admin user on cli
 `php bin/magento admin:user:create --admin-user="[username]" --admin-password="[pass]" --admin-email="[email]" --admin-firstname="[firstname]" --admin-lastname="[lastname]`
 
+### Magento 1 reindex all
+`cd [MAGENTO_ROOT]/shell/
+php indexer.php --status
+php indexer.php --reindexall`
+
+
+
