@@ -26,7 +26,9 @@ php bin/magento config:set admin/captcha/enable 0
 
 ### Magento 1 reindex all
 `cd [MAGENTO_ROOT]/shell/
+
 php indexer.php --status
+
 php indexer.php --reindexall`
 
 
