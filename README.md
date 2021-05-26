@@ -3,25 +3,25 @@ Here are some Magento 2.x CLI commands I use once in a while. Using this as my p
 ### List all installed modules/extensions including version:
 `n98-magerun2 dev:module:list`
 
-### Disable captcha frontend + backend via cli
+### Magento 2 Disable captcha frontend + backend via cli
 ```
 php bin/magento config:set customer/captcha/enable 0
 php bin/magento config:set admin/captcha/enable 0
 ```
 
-### change user passwd in phpmyadmin
+### Magento 2 change user passwd in phpmyadmin
 `UPDATE admin_user SET password = SHA2('[passwd]', 256) WHERE username='[username]';`
 
-### unlock admin user
+### Magento 2 unlock admin user
 `php bin/magento admin:user:unlock [username]`
 
-### reindex
+### Magento 2 reindex
 `php bin/magento indexer:reindex`
 
-### clean cache
+### Magento 2 clean cache
 `php bin/magento c:c`
 
-### make new admin user on cli
+### Magento 2 make new admin user on cli
 `php bin/magento admin:user:create --admin-user="[username]" --admin-password="[pass]" --admin-email="[email]" --admin-firstname="[firstname]" --admin-lastname="[lastname]`
 
 ### Magento 1 reindex all
