@@ -3,6 +3,9 @@ Here are some Magento 2.x CLI commands I use once in a while. Using this as my p
 ### List all installed modules/extensions including version:
 `n98-magerun2 dev:module:list`
 
+### Magento 2 list all modules:
+`php bin/magento module:status`
+
 ### Magento 2 Disable captcha frontend + backend via cli
 ```
 php bin/magento config:set customer/captcha/enable 0
