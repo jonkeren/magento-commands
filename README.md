@@ -22,7 +22,11 @@ php bin/magento config:set admin/captcha/enable 0
 `php bin/magento indexer:reindex`
 
 ### Magento 2 clean cache
-`php bin/magento c:c`
+```
+php bin/magento c:c
+php bin/magento cache:flush
+```
+
 
 ### Magento 2 make new admin user on cli
 `php bin/magento admin:user:create --admin-user="[username]" --admin-password="[pass]" --admin-email="[email]" --admin-firstname="[firstname]" --admin-lastname="[lastname]`
