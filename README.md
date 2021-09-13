@@ -27,9 +27,8 @@ php bin/magento c:c
 php bin/magento cache:flush
 ```
 
-
 ### Magento 2 make new admin user on cli
-`php bin/magento admin:user:create --admin-user="[username]" --admin-password="[pass]" --admin-email="[email]" --admin-firstname="[firstname]" --admin-lastname="[lastname]`
+`php bin/magento admin:user:create --admin-user="USERNAME" --admin-password="PASS" --admin-email="EMAIL" --admin-firstname="FIRSTNAME" --admin-lastname="LASTNAME"`
 
 ### Magento 1 reindex all
 ```
@@ -37,7 +36,13 @@ cd [MAGENTO_ROOT]/shell/
 php indexer.php --status  
 php indexer.php --reindexall
 ```
+### Magento 2 set base URL's
+```
+php bin/magento config:set --scope=website --scope-code=base -- web/unsecure/base_url "http://www.website.com/"
+php bin/magento config:set --scope=website --scope-code=base -- web/secure/base_url "http://www.website.com/"
+```
 
-
-
-
+### Magento 2 set Admin session lifetime
+```
+php bin/magento config:set admin/security/session_lifetime 31536000
+```
