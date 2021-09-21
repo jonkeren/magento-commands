@@ -42,6 +42,12 @@ php bin/magento config:set --scope=website --scope-code=base -- web/unsecure/bas
 php bin/magento config:set --scope=website --scope-code=base -- web/secure/base_url "http://www.website.com/"
 ```
 
+### magento 2 set base media URL
+```
+magerun2 config:store:set web/unsecure/base_media_url https://www.SITE.nl:8443/media/
+magerun2 config:store:set web/secure/base_media_url https://www.SITE.nl:8443/media/
+```
+
 ### Magento 2 set Admin session lifetime
 ```
 php bin/magento config:set admin/security/session_lifetime 31536000
