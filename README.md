@@ -52,3 +52,10 @@ magerun2 config:store:set web/secure/base_media_url https://www.SITE.nl:8443/med
 ```
 php bin/magento config:set admin/security/session_lifetime 31536000
 ```
+
+### Magento 2 find cacheable="false" blocks in templates
+```
+cd app/design/frontend/ && grep --recursive -l 'cacheable="false"' * && cd ../../..;
+cd app/code && grep --recursive -l 'cacheable="false"' * && cd ../..;
+cd vendor && grep --recursive -l 'cacheable="false"' * && cd ..;
+```
