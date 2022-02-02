@@ -9,6 +9,9 @@ Here are some Magento 2.x CLI commands I use once in a while. Using this as my p
 ### Magento 2 set Varnish to flush with Magento FPC flush:
 `php bin/magento setup:config:set --http-cache-hosts=127.0.0.1`
 
+### Check on CLI if Varnish is flushed when clicking button in Admin:
+`varnishlog -g request -q 'ReqMethod eq "PURGE"'`
+
 ### Magento 2 Disable captcha frontend + backend via cli
 ```
 php bin/magento config:set customer/captcha/enable 0
