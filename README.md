@@ -14,6 +14,7 @@ Here are some Magento 2.x CLI commands I use once in a while. Using this as my p
 
 ### List Varnish URLs with most Cache Misses
 This will create a list of the URLs that caused the most cache misses the last hour.
+
 `varnishtop -p 3600 -i BereqURL`
 
 ### Magento 2 Disable captcha frontend + backend via cli
