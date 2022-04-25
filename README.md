@@ -65,9 +65,11 @@ php bin/magento config:set admin/security/session_lifetime 31536000
 ```
 
 ### Magento 2 disable forced Admin password change
-`php bin/magento config:set admin/security/password_lifetime 0
+```
+php bin/magento config:set admin/security/password_lifetime 0
 php bin/magento config:set admin/security/password_is_forced 0
-php bin/magento c:f`
+php bin/magento c:f
+```
 
 ### Magento 2 find cacheable="false" blocks in templates
 ```
