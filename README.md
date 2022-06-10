@@ -59,6 +59,15 @@ magerun2 config:store:set web/unsecure/base_media_url https://www.SITE.nl:8443/m
 magerun2 config:store:set web/secure/base_media_url https://www.SITE.nl:8443/media/
 ```
 
+### magento 2 set base URL's with magerun
+```
+export SHOPHOST="mynode.hypernode.io"
+magerun2 --root-dir=/data/web/magento2 config:store:set web/unsecure/base_url https://$SHOPHOST/
+magerun2 --root-dir=/data/web/magento2 config:store:set web/secure/base_url https://$SHOPHOST/
+magerun2 --root-dir=/data/web/magento2 config:store:set web/unsecure/base_link_url https://$SHOPHOST/ 
+magerun2 --root-dir=/data/web/magento2 config:store:set web/secure/base_link_url https://$SHOPHOST/
+magerun2 --root-dir=/data/web/magento2 cache:flush
+```
 ### Magento 2 set Admin session lifetime
 ```
 php bin/magento config:set admin/security/session_lifetime 31536000
